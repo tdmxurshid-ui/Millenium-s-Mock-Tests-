@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IELTS Writing Practice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="navbar">
+            <div class="brand">MILLENIUM'S IELTS PRACTICE</div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="reading.html">Reading</a>
+                <a href="listening.html">Listening</a>
+                <a href="speaking.html">Speaking</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="button btn-secondary theme-toggle" onclick="toggleTheme()">🌙 Dark</button>
+            </div>
+        </div>
+    </header>
+
+    <main id="writing-root">
+        <section class="hero">
+            <div class="hero-grid">
+                <div class="hero-copy">
+                    <span class="hero-pill">Task 1 & 2</span>
+                    <h1>IELTS Academic Writing</h1>
+                    <p>Practice real-style academic prompts with a writing timer, live word count, auto-save, and AI band prediction guidance.</p>
+                </div>
+                <div class="hero-media">
+                    <img src="writingrasm.png" alt="Writing practice interface">
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="timer-box" id="writing-timer">60:00</div>
+            <div class="writing-grid">
+                <div class="panel">
+                    <h3>Task 1: Academic Report</h3>
+                    <p>Write a report describing the trends shown in the chart and compare the key features.</p>
+                    <div class="textarea-group">
+                        <label for="writing-task1">Your response</label>
+                        <textarea id="writing-task1" placeholder="Type your Task 1 answer here..."></textarea>
+                        <small id="word-count-1">0 words</small>
+                    </div>
+                    <div class="panel">
+                        <h3>Task 2: Academic Essay</h3>
+                        <p>Discuss both views and give your own opinion about the role of government vs individuals in environmental protection.</p>
+                        <textarea id="writing-task2" placeholder="Type your Task 2 answer here..."></textarea>
+                        <small id="word-count-2">0 words</small>
+                    </div>
+                    <div class="button-row">
+                        <button class="button btn-primary" id="analysis-button">Get AI Feedback</button>
+                    </div>
+                    <p class="text-muted" id="writing-save-state">Auto-save is active as you type.</p>
+                </div>
+
+                <div class="panel feedback-box">
+                    <h3>AI Band Score Prediction</h3>
+                    <div id="writing-feedback">
+                        <p>Enter your responses and click <strong>Get AI Feedback</strong> to see writing analysis and band estimates.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Writing module with word count and structured exam practice.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

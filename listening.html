@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IELTS Listening Practice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="navbar">
+            <div class="brand">MILLENIUM'S IELTS PRACTICE</div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="reading.html">Reading</a>
+                <a href="writing.html">Writing</a>
+                <a href="speaking.html">Speaking</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="button btn-secondary theme-toggle" onclick="toggleTheme()">🌙 Dark</button>
+            </div>
+        </div>
+    </header>
+
+    <main id="listening-root">
+        <section class="hero">
+            <div class="hero-grid">
+                <div class="hero-copy">
+                    <span class="hero-pill">Section 1–4</span>
+                    <h1>IELTS Academic Listening</h1>
+                    <p>Simulate a computer-delivered listening section with one-time audio playback and realistic question types.</p>
+                </div>
+                <div class="hero-media">
+                    <img src="listeningrasm.png" alt="Listening practice preview">
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="panel">
+                <div class="panel-header">
+                    <h3>Exam timer</h3>
+                    <p class="text-muted">Your answers are saved automatically while you work.</p>
+                </div>
+                <div class="timer-box" id="listening-timer">40:00</div>
+            </div>
+            <div class="listening-grid">
+                <div class="audio-panel panel">
+                    <h3>Audio player</h3>
+                    <audio id="listening-audio" controls>
+                        <source src="listening.mp3" type="audio/mpeg">
+                        Your browser does not support audio playback.
+                    </audio>
+                    <p>Once the audio ends, replay will be disabled to mirror exam conditions.</p>
+                    <div class="question-nav">
+                        <button class="section-button active" data-section="section1" onclick="setActiveSection(this)">Section 1</button>
+                        <button class="section-button" data-section="section2" onclick="setActiveSection(this)">Section 2</button>
+                        <button class="section-button" data-section="section3" onclick="setActiveSection(this)">Section 3</button>
+                        <button class="section-button" data-section="section4" onclick="setActiveSection(this)">Section 4</button>
+                    </div>
+                </div>
+
+                <div class="answer-panel panel">
+                    <div id="section1">
+                        <h3>Section 1: Booking questions</h3>
+                        <div class="input-group">
+                            <label for="listen1">1. The customer arrives on</label>
+                            <input id="listen1" data-listening-answer placeholder="Answer">
+                        </div>
+                        <div class="input-group">
+                            <label for="listen2">2. The destination is a</label>
+                            <input id="listen2" data-listening-answer placeholder="Answer">
+                        </div>
+                        <div class="input-group">
+                            <label for="listen3">3. Meal included with the room is</label>
+                            <input id="listen3" data-listening-answer placeholder="Answer">
+                        </div>
+                    </div>
+
+                    <div id="section2" class="hidden">
+                        <h3>Section 2: Tour information</h3>
+                        <div class="input-group">
+                            <label for="listen4">4. The tour begins at the</label>
+                            <input id="listen4" data-listening-answer placeholder="Answer">
+                        </div>
+                        <div class="input-group">
+                            <label for="listen5">5. The guide mentions the</label>
+                            <input id="listen5" data-listening-answer placeholder="Answer">
+                        </div>
+                    </div>
+
+                    <div id="section3" class="hidden">
+                        <h3>Section 3: Academic discussion</h3>
+                        <div class="input-group">
+                            <label for="listen6">6. The team decides to study</label>
+                            <input id="listen6" data-listening-answer placeholder="Answer">
+                        </div>
+                        <div class="input-group">
+                            <label for="listen7">7. The speaker suggests analysing</label>
+                            <input id="listen7" data-listening-answer placeholder="Answer">
+                        </div>
+                    </div>
+
+                    <div id="section4" class="hidden">
+                        <h3>Section 4: Lecture summary</h3>
+                        <div class="input-group">
+                            <label for="listen8">8. The main lecture topic is</label>
+                            <input id="listen8" data-listening-answer placeholder="Answer">
+                        </div>
+                        <div class="input-group">
+                            <label for="listen9">9. A key example mentions</label>
+                            <input id="listen9" data-listening-answer placeholder="Answer">
+                        </div>
+                    </div>
+
+                    <div class="button-row">
+                        <button class="button btn-primary" id="listening-submit" onclick="checkListeningAnswers()">Submit Answers</button>
+                    </div>
+                    <div class="score-card">
+                        <div class="metric">
+                            <h4>Instant score</h4>
+                            <strong id="listening-score">0/0</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Listening practice with realistic IELTS layout and timed scoring.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IELTS Reading Practice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="navbar">
+            <div class="brand">MILLENIUM'S IELTS PRACTICE</div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="listening.html">Listening</a>
+                <a href="writing.html">Writing</a>
+                <a href="speaking.html">Speaking</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="button btn-secondary theme-toggle" onclick="toggleTheme()">🌙 Dark</button>
+            </div>
+        </div>
+    </header>
+
+    <main id="reading-root">
+        <section class="hero">
+            <div class="hero-grid">
+                <div class="hero-copy">
+                    <span class="hero-pill">60-Minute Timer</span>
+                    <h1>IELTS Academic Reading</h1>
+                    <p>Practice passage comprehension with a real exam-style layout, highlight text, take notes, and auto-save your progress.</p>
+                </div>
+                <div class="hero-media">
+                    <img src="readingrasm.png" alt="Reading practice interface">
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="timer-box" id="reading-timer">60:00</div>
+            <div class="reading-grid">
+                <div class="panel">
+                    <div class="panel-header">
+                        <h3>Reading passage</h3>
+                        <p class="text-muted">Highlight important phrases and make notes while you read.</p>
+                    </div>
+                    <div id="reading-passage" class="reading-passage">
+                        <h3>Urban Green Spaces</h3>
+                        <p>In recent years, city planners have increased their focus on urban green spaces such as parks, community gardens, and tree-lined streets. These areas improve air quality, reduce noise pollution, and provide essential recreational space for residents. Green spaces also contribute to better mental health by offering a peaceful escape from the busyness of city life.</p>
+                        <p>Studies suggest that people living near parks are more likely to exercise regularly and feel socially connected. As a result, many local governments are investing in new green initiatives, including pocket parks, rooftop gardens, and green corridors that link neighborhoods.</p>
+                    </div>
+                    <div class="button-row">
+                        <button class="button btn-secondary" id="reading-highlight">Highlight Selection</button>
+                    </div>
+                    <div class="textarea-group">
+                        <label for="reading-notes">Notes</label>
+                        <textarea id="reading-notes" class="note-area" placeholder="Write your notes here..."></textarea>
+                    </div>
+                    <p class="text-muted" id="reading-save-state">Auto-save is enabled.</p>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-header">
+                        <h3>Questions</h3>
+                        <p class="text-muted">Use the navigator to jump between question groups.</p>
+                    </div>
+                    <div class="question-nav">
+                        <button class="active" data-section="questionBlock" onclick="setActiveSection(this)">Questions</button>
+                    </div>
+                    <div id="questionBlock">
+                        <div class="question-list">
+                            <div class="question" id="question1">
+                                <label for="reading1">1. According to the passage, green spaces help improve _______ quality.</label>
+                                <input id="reading1" data-reading-answer placeholder="Type your answer">
+                            </div>
+                            <div class="question" id="question2">
+                                <label for="reading2">2. The passage says green spaces can reduce _______ pollution.</label>
+                                <input id="reading2" data-reading-answer placeholder="Type your answer">
+                            </div>
+                            <div class="question" id="question3">
+                                <label for="reading3">3. People near parks are more likely to feel socially _______.</label>
+                                <input id="reading3" data-reading-answer placeholder="Type your answer">
+                            </div>
+                            <div class="question" id="question4">
+                                <label for="reading4">4. Local governments are adding parks and rooftop gardens to create green _______.</label>
+                                <input id="reading4" data-reading-answer placeholder="Type your answer">
+                            </div>
+                            <div class="question" id="question5">
+                                <label for="reading5">5. The passage describes green spaces as a peaceful escape from _______ life.</label>
+                                <input id="reading5" data-reading-answer placeholder="Type your answer">
+                            </div>
+                        </div>
+                        <div class="button-row">
+                            <button class="button btn-primary" onclick="checkReadingAnswers()">Review Answers</button>
+                        </div>
+                        <div id="reading-score" class="feedback-box"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Realistic reading section to help you prepare for IELTS Academic.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

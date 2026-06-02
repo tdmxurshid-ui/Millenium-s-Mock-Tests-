@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IELTS Speaking Practice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="navbar">
+            <div class="brand">MILLENIUM'S IELTS PRACTICE</div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="reading.html">Reading</a>
+                <a href="listening.html">Listening</a>
+                <a href="writing.html">Writing</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="button btn-secondary theme-toggle" onclick="toggleTheme()">🌙 Dark</button>
+            </div>
+        </div>
+    </header>
+
+    <main id="speaking-root">
+        <section class="hero">
+            <div class="hero-grid">
+                <div class="hero-copy">
+                    <span class="hero-pill">Part 1, Part 2, Part 3</span>
+                    <h1>IELTS Speaking Simulation</h1>
+                    <p>Practice cue cards and speaking tasks with a preparation timer, recording tool, and instant feedback.</p>
+                </div>
+                <div class="hero-media">
+                    <img src="speakingrasm.png" alt="Speaking practice interface">
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="speaking-grid">
+                <div class="panel">
+                    <h3>Part 1: Introduction</h3>
+                    <div class="question-list">
+                        <div class="question">
+                            <label>What kinds of films do you enjoy watching?</label>
+                            <small>Answer with a brief opinion and example.</small>
+                        </div>
+                        <div class="question">
+                            <label>Do you prefer reading books or watching movies?</label>
+                            <small>Explain why and compare both.</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel">
+                    <h3>Part 2: Cue Card</h3>
+                    <div class="feedback-box">
+                        <h4>Describe a special gift you received</h4>
+                        <ul>
+                            <li>What the gift was</li>
+                            <li>Who gave it to you</li>
+                            <li>When you received it</li>
+                            <li>Why it was special</li>
+                        </ul>
+                    </div>
+                    <div class="button-row">
+                        <button class="button btn-secondary" onclick="alert('Use the preparation time to note your ideas.');">Start Preparation</button>
+                    </div>
+                </div>
+                <div class="panel">
+                    <h3>Part 3: Discussion</h3>
+                    <div class="feedback-box">
+                        <p>Do you think people will watch fewer live performances in the future?</p>
+                        <p>Practice extending your answer with reasons and examples.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="panel">
+                <h3>Speaking practice tools</h3>
+                <div class="button-row">
+                    <button class="button btn-primary" id="record-button" data-state="stopped">Start Recording</button>
+                    <button class="button btn-secondary" id="analyze-speaking">Analyze Speaking</button>
+                </div>
+                <audio id="recording-playback" controls style="display:none; margin-top:20px;"></audio>
+                <div id="speaking-feedback" class="feedback-box" style="margin-top:20px;"><p>Record your response and click Analyze Speaking to see a summary of fluency, pronunciation, grammar, and vocabulary.</p></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Speaking practice with simulated exam flow and AI feedback cues.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

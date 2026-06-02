@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IELTS Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="navbar">
+            <div class="brand">MILLENIUM'S IELTS PRACTICE</div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="reading.html">Reading</a>
+                <a href="listening.html">Listening</a>
+                <a href="writing.html">Writing</a>
+                <a href="speaking.html">Speaking</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="button btn-secondary theme-toggle" onclick="toggleTheme()">🌙 Dark</button>
+            </div>
+        </div>
+    </header>
+
+    <main id="dashboard-root">
+        <section class="hero">
+            <div class="hero-grid">
+                <div class="hero-copy">
+                    <span class="hero-pill">PROFILE</span>
+                    <h1>Welcome back, <span class="user-name">Student</span></h1>
+                    <p>Track your IELTS Academic progress with exam history, analytics, vocabulary review, and mock exam performance.</p>
+                    <div class="label-pill">Daily Academic practice</div>
+                </div>
+                <div class="hero-media">
+                    <img src="mock millenium.jpg" alt="IELTS Dashboard Visual">
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-headline">
+                <h2>Exam history & performance analytics</h2>
+                <p>Review your latest mock exam results, compare section scores, and identify the skills that need the most attention.</p>
+            </div>
+            <div class="grid-cards">
+                <div class="card">
+                    <div class="icon">📊</div>
+                    <h3>Weekly progress</h3>
+                    <p>Monitor your reading, listening, writing and speaking growth with visual analytics tailored to IELTS Academic standards.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">🧠</div>
+                    <h3>AI study advice</h3>
+                    <p>Receive suggestions on your top study areas so you can focus on vocabulary, grammar, coherence, and exam timing.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">⭐</div>
+                    <h3>Estimated band score</h3>
+                    <p>Your current mock exam average is saved here to help you track improvements and stay motivated.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="panel">
+                <div class="panel-header">
+                    <h3>Mock exam history</h3>
+                    <p class="text-muted">Recently completed tests are saved automatically.</p>
+                </div>
+                <div class="table-wrapper">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Section</th>
+                                <th>Score</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="history-body"></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="grid-cards">
+                <div class="panel">
+                    <h3>Practice streak</h3>
+                    <p>Keep your preparation consistent with daily IELTS Academic practice sessions.</p>
+                    <div class="score-card">
+                        <div class="metric">
+                            <h4>Streak</h4>
+                            <strong id="practice-streak">0 days</strong>
+                        </div>
+                        <div class="metric">
+                            <h4>Active units</h4>
+                            <strong>4 modules</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel">
+                    <h3>Vocabulary notebook</h3>
+                    <p>Add new academic words, note collocations, and review your strongest vocabulary categories.</p>
+                    <ul class="list-rows">
+                        <li><strong>Analyze</strong> - examine, investigate</li>
+                        <li><strong>Coherent</strong> - logical, well organised</li>
+                        <li><strong>Undertake</strong> - begin, carry out</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="panel">
+                <h3>Wrong answer review</h3>
+                <p>Study the most difficult question types and learn from your mistakes.</p>
+                <ul class="list-rows">
+                    <li>Reading: Matching headings</li>
+                    <li>Listening: Fill-in-the-gap with numbers</li>
+                    <li>Writing: Task 2 cohesion and vocabulary</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Millenium's ielts practice.Created by Akmal Akhmedjanov.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
